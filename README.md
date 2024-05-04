@@ -14,7 +14,11 @@ the top right corner of the board is input: '1 3'
 
 the program stops once the game ends. 
 
-wrong inputs will not be parsed. 
+wrong inputs will not be parsed and will cuase error: common ones and their meaning are noted here;  
+    -   if lots of "sentinal errors" are printed: move entered on top of a preexisting move. 
+        -   note, going on top of another peice does not always cause an error
+    - this error: "ValueError: invalid literal for int() with base 10: '&'",
+    means the program was previous running when it was started. 
 
 if the game ends and input is still open, it sometimes crashes right away, in this case start it over. 
 

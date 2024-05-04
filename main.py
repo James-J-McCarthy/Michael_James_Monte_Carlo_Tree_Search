@@ -28,7 +28,7 @@ def gameOn():
 
 def MCTS(current):
     count = 0
-    while count < 101:
+    while count < 500:
         leaf = simulate(treeDecision(current))
         backPropogate(leaf[0], current, leaf[1])
         count += 1
@@ -43,6 +43,7 @@ def favoriteChild(node):
             if nd.terminalFlag > 0:
                 fav = nd
                 break
+            
             if nd.score/(nd.visits) > fav.score/(fav.visits):
                 fav = nd
     if fav == None:
@@ -124,3 +125,4 @@ def getChildren(node):
         
 
 gameOn()
+
